@@ -1,7 +1,11 @@
 {
 
    
-    "chromeWebSecurity": false
+    "chromeWebSecurity": false,
+
+    "integrationFolder":"cypress/integration/Task/Test"
+
+
     
    
 

@@ -42,7 +42,7 @@ class Locators{
     }
 
     get AddToCart(){
-        return cy.get(':nth-child(3) > .info-container > .mobile-container > .add-to-cart > .desktop')
+        return cy.get(':nth-child(10) > .info-container > .mobile-container > .add-to-cart > .desktop')
     }
     get saveBtn(){
         return cy.get('#save-button')

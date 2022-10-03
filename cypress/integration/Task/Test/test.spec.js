@@ -6,7 +6,7 @@ const LoginLocators = require('../page_Object/LoginLocators')
 let user = {
     Fname: "Aarav",
     Lname: "Gaikwad",
-    email: `AaravG1234@gmail.com`,
+    email: `AaravG100@gmail.com`,
     Pass: `Password@123`,
     phone: "9222222222",
     addLine1: "Street Address sample 1",
@@ -53,7 +53,7 @@ describe("Ts-01_ Varify the purchasing functionality", function () {
 
         //********************************************************* */
         //color of socks ==> yellow- 0, pink-1, blue- 2
-        cy.get(`:nth-child(${user.size}) > #save-button`).click()
+        //cy.get(`:nth-child(${user.size}) > #save-button`).click()
 
         Locators.saveBtn.click();
         cy.wait(2000);
@@ -110,7 +110,7 @@ describe("Ts-01_ Varify the purchasing functionality", function () {
 
         //********************************************************* */
         //color of socks ==> yellow- 0, pink-1, blue- 2
-        cy.get(`:nth-child(${user.size}) > #save-button`).click()
+        //cy.get(`:nth-child(${user.size}) > #save-button`).click()
         Locators.saveBtn.click();
         cy.wait(2000);
         LoginLocators.couponBtn.click()
