@@ -6,7 +6,7 @@ const LoginLocators = require('../page_Object/LoginLocators')
 let user = {
     Fname: "Aarav",
     Lname: "Gaikwad",
-    email: `AaravG100@gmail.com`,
+    email: `AaravG1${Math.random()}@gmail.com`,
     Pass: `Password@123`,
     phone: "9222222222",
     addLine1: "Street Address sample 1",
@@ -28,12 +28,14 @@ let Coupon = {
     twentyPer: "20%OFF"
 }
 
+const mail = user.email
+
 describe("Ts-01_ Varify the purchasing functionality", function () {
     it("Tc-01_Creating new Account and Purchase Using only Credit Card", function () {
         Locators.urlpage("register")
         Locators.First_name.type(user.Fname);
         Locators.Last_name.type(user.Lname);
-        Locators.Email.type(user.email);
+        Locators.Email.type(mail);
         Locators.Password.type(user.Pass);
         Locators.CreateBtn.click();
 
@@ -96,7 +98,7 @@ describe("Ts-01_ Varify the purchasing functionality", function () {
 
     it("Tc-02_Login with Existing user,Buying Product Using Coupon & CreditCard", function () {
         Locators.urlpage("login")
-        LoginLocators.login(user.email, user.Pass)
+        LoginLocators.login(mail, user.Pass)
         // assering the welcome text after successfull login
         cy.contains(` Welcome Back, ${user.Fname}`).should('be.visible')
 
